@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <OutputType>Exe</OutputType>
+    <UseAppHost>false</UseAppHost>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <VrcftCorePath Condition="'$(VrcftCorePath)' == ''">../.build/source/VRCFaceTracking-ad06f2967a2243d85ad161a397eb911522182c15/VRCFaceTracking.Core/bin/Release/net7.0/VRCFaceTracking.Core.dll</VrcftCorePath>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="../aGlassVRCFT.csproj" />
+    <Reference Include="VRCFaceTracking.Core"><HintPath>$(VrcftCorePath)</HintPath></Reference>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+  </ItemGroup>
+</Project>

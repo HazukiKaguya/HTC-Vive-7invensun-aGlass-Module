@@ -1,0 +1,11 @@
+{
+  "ModuleId": "8ea02335-197a-4822-81ed-3e414bf4a1e3",
+  "ModuleName": "HTC Vive 7invensun aGlass Module",
+  "AuthorName": "Hazuki Kaguya",
+  "Version": "0.2.0",
+  "LastUpdated": "2026-10-17T00:00:00+09:00",
+  "ModuleDescription": "Direct TCP/UDP eye tracking from an existing aGlass Runtime 1.1, with optional Python bridge compatibility for other SDKs. No SteamVR required in direct FOV mode.",
+  "UsageInstructions": "Start and calibrate aGlass Runtime 1.1, ensure its USB Key authorization is ready, then reload this module. Source=runtime (default package) needs no Python bridge. Source=bridge uses local OSC UDP 9015. Do not run both tracking clients simultaneously. Eyelids are estimated from validity. See README.md and aGlassVRCFT.json beside the DLL.",
+  "ModulePageUrl": "https://github.com/HazukiKaguya/HTC-Vive-7invensun-aGlass-Module",
+  "DllFileName": "aGlassVRCFT.dll"
+}

@@ -1,0 +1,23 @@
+{
+  "Source": "runtime",
+  "RuntimePort": 0,
+  "EventPort": 0,
+  "DataPort": 0,
+  "CommandTimeoutMs": 5000,
+  "StopTimeoutMs": 1500,
+  "StaleMs": 250,
+  "FovX": 100,
+  "FovY": 100,
+  "CenterX": 0.5,
+  "CenterY": 0.5,
+  "GainX": 1,
+  "GainY": 1,
+  "InvertX": false,
+  "InvertY": false,
+  "SmoothingMs": 25,
+  "EstimateBlink": true,
+  "BlinkDelayMs": 30,
+  "BlinkMaxMs": 600,
+  "Port": 9015,
+  "TimeoutMs": 500
+}

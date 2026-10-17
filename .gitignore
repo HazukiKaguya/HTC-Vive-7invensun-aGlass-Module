@@ -1,0 +1,16 @@
+# Generated SDK sources, packages and test fixtures
+.build/
+# Build products belong in GitHub Releases, not the source tree
+bin/
+obj/
+release/
+tests/bin/
+tests/obj/
+__pycache__/
+*.py[cod]
+*.log
+.vs/
+.idea/
+.vscode/
+*.user
+*.suo

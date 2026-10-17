@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AssemblyName>aGlassVRCFT</AssemblyName>
+    <Version>0.2.0</Version>
+    <VrcftCorePath Condition="'$(VrcftCorePath)' == ''">.build/source/VRCFaceTracking-ad06f2967a2243d85ad161a397eb911522182c15/VRCFaceTracking.Core/bin/Release/net7.0/VRCFaceTracking.Core.dll</VrcftCorePath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="VRCFaceTracking.Core">
+      <HintPath>$(VrcftCorePath)</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="7.0.0" />
+    <Compile Remove="tests/**/*.cs;.build/**/*.cs" />
+  </ItemGroup>
+  <Target Name="CheckVrcftCore" BeforeTargets="ResolveReferences">
+    <Error Condition="!Exists('$(VrcftCorePath)')" Text="VRCFT Core is missing. Run: python tools/build.py (downloads and builds the pinned official SDK)." />
+  </Target>
+</Project>
